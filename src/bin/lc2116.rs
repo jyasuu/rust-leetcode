@@ -1,4 +1,4 @@
-sturct Solution;
+struct Solution;
 
 impl Solution {
     pub fn can_be_valid(s: String, locked: String) -> bool {
@@ -13,22 +13,19 @@ impl Solution {
         let mut l_count = 0;
         let mut r_count = 0;
         let mut x_count = 0;
-        for i in 0..n
-        {
+        for i in 0..n {
             match locked[i] {
                 b'0' => {
                     x_count += 1;
-                },
-                b'1' => {
-                    match bytes[i] {
-                        b'(' => {
-                            l_count += 1;
-                        },
-                        b')' => {
-                            r_count += 1;
-                        },
-                        _ => {}
+                }
+                b'1' => match bytes[i] {
+                    b'(' => {
+                        l_count += 1;
                     }
+                    b')' => {
+                        r_count += 1;
+                    }
+                    _ => {}
                 },
                 _ => {}
             }
@@ -36,26 +33,23 @@ impl Solution {
                 return false;
             }
         }
-        
+
         let mut l_count = 0;
         let mut r_count = 0;
         let mut x_count = 0;
-        for i in (0..n).rev()
-        {
+        for i in (0..n).rev() {
             match locked[i] {
                 b'0' => {
                     x_count += 1;
-                },
-                b'1' => {
-                    match bytes[i] {
-                        b'(' => {
-                            l_count += 1;
-                        },
-                        b')' => {
-                            r_count += 1;
-                        },
-                        _ => {}
+                }
+                b'1' => match bytes[i] {
+                    b'(' => {
+                        l_count += 1;
                     }
+                    b')' => {
+                        r_count += 1;
+                    }
+                    _ => {}
                 },
                 _ => {}
             }
@@ -64,12 +58,8 @@ impl Solution {
             }
         }
 
-
         true
     }
 }
 
-fn main() 
-{
-
-}
+fn main() {}
