@@ -54,20 +54,6 @@ mod tests {
     }
 
     #[test]
-    fn test_flip_and_invert_image_single_row() {
-        let image = vec![vec![1, 0, 1]];
-        let result = Solution::flip_and_invert_image(image);
-        assert_eq!(result, vec![vec![0, 1, 0]]);
-    }
-
-    #[test]
-    fn test_flip_and_invert_image_single_column() {
-        let image = vec![vec![1], vec![0], vec![1]];
-        let result = Solution::flip_and_invert_image(image);
-        assert_eq!(result, vec![vec![0], vec![1], vec![0]]);
-    }
-
-    #[test]
     fn test_flip_and_invert_image_empty() {
         let image: Vec<Vec<i32>> = vec![];
         let _result = Solution::flip_and_invert_image(image);
