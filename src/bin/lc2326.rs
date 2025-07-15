@@ -1,20 +1,17 @@
-
+#![allow(dead_code)]
 // Definition for singly-linked list.
- #[derive(PartialEq, Eq, Clone, Debug)]
- pub struct ListNode {
-   pub val: i32,
-   pub next: Option<Box<ListNode>>
- }
- 
- impl ListNode {
-   #[inline]
-   fn new(val: i32) -> Self {
-     ListNode {
-       next: None,
-       val
-     }
-   }
- }
+#[derive(PartialEq, Eq, Clone, Debug)]
+pub struct ListNode {
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
+}
+
+impl ListNode {
+    #[inline]
+    fn new(val: i32) -> Self {
+        ListNode { next: None, val }
+    }
+}
 
 struct Solution;
 
@@ -29,7 +26,7 @@ impl Solution {
         let mut l = 0;
         let mut d = m - 1;
         let mut u = 1;
-        while let Some(mut node) = head {
+        while let Some(node) = head {
             res[x as usize][y as usize] = node.val;
             match dir {
                 0 => {
@@ -73,12 +70,8 @@ impl Solution {
             head = node.next;
         }
 
-
-        res        
+        res
     }
 }
 
-fn main()
-{
-
-}
+fn main() {}

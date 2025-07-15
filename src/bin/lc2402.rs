@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 struct Solution;
 impl Solution {
     pub fn most_booked(n: i32, mut meetings: Vec<Vec<i32>>) -> i32 {
@@ -96,5 +97,4 @@ mod test {
         );
         assert_eq!(actual, 0);
     }
-
 }

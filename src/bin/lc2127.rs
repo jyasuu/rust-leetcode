@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 use std::collections::VecDeque;
 
 struct Solution;
@@ -76,7 +77,4 @@ impl Solution {
     }
 }
 
-fn main()
-{
-
-}
+fn main() {}
